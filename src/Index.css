@@ -1,0 +1,223 @@
+@import url("https://fonts.googleapis.com/css?family=Google+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;900&family=Volkhov:wght@400;700&display=swap");
+@import url('./container.css');
+@import url('./flexbox.css');
+@import url('./gridbox.css');
+
+/* start of usefull selector names 
+
+// containers
+    header_container_10vh
+    header_container_auto
+    hero_container_90vh
+    hero_container_100vh
+    hero_container_auto
+    container
+    container_2clm
+
+
+//flex boxs
+    flex_box_2d,
+    flex_box_3d,
+    flex_box_4d,
+    flex_box_5d
+
+
+//grid boxs
+    grid_box_3areas,
+    grid_box_4clm,
+    grid_box_5clm,
+    grid_box_6clm,
+    grid_box_7clm,
+    grid_box_8clm,
+    grid_box_9clm,
+    grid_box_10clm
+
+*/
+
+:root{
+    --google-san-font: 'Google Sans';
+    --poppins-font: 'Poppins';
+    --volkhov-font: 'Volkhov';
+    --primary-color:#181e4b;
+    --secondary-color: #5E6282;
+    --third-color: #1E1D4C;
+    --fourth-color: #F1A501;
+    --fifth-color: #DF6951;
+    ---text-color: #5E6282
+}
+*,
+*::after,
+*::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+head{
+    font-family: Arial, Helvetica, sans-serif;
+}
+body{
+    height: auto;
+    width: auto;
+    font-family: Arial, Helvetica, sans-serif;
+    position: relative;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+header,
+nav,
+main,
+footer{
+    background-color: #fff;
+}
+header > div,
+main > section,
+footer > section{
+    padding: 0 10%;
+    width: 100%;
+    height: auto;
+}
+
+/* font sizes */
+h1{
+    font-size: 84px;
+}
+h2{
+    font-size: 50px;
+}
+h3{
+    font-size: 18px;
+}
+h4{
+    font-size: 20px;
+}
+p,
+label,
+li,
+input,
+select,
+option,
+textarea,
+a,
+button{
+    font-size: 16px;
+}
+
+/* font color */
+h1, h2{
+    font-family: var(--volkhov-font);
+    color: var(--primary-color);
+    font-weight: bold;
+}
+h3{
+    font-family: var(--poppins-font);
+    font-weight: medium;
+    color: var(--secondary-color);
+}
+h4{
+    font-family: var(--google-san-font);
+    font-weight: medium;
+    color: var(--third-color);
+}
+p,
+label,
+li,
+input,
+select,
+textarea{
+    font-family: var(--poppins-font);
+    color: var(--text-color);
+    outline: none;
+}
+a,
+button{
+    font-family: var(--google-san-font);
+    cursor: pointer;
+    color: var(---text-color);
+    text-decoration: none;
+}
+
+/* additional css for general design */
+body.body{
+    overflow-y: hidden;
+}
+body.body::-webkit-scrollbar {
+     display: none;  
+ }
+
+
+
+/*low resolution tablets, mobiles (landscape)*/
+@media (min-width: 768px) and (max-width: 1024.9px){
+    header > div,
+    main > section,
+    footer > section{
+        padding: 0 5%;
+    }
+
+}
+@media (min-width: 481px) and (max-width: 767.99px){
+    header > div,
+    main > section,
+    footer > section{
+        padding: 0 3%;
+    }
+    h1{
+        font-size: 42px;
+    }
+    h2{
+        font-size: 25px;
+    }
+    h3{
+        font-size: 10px;
+    }
+    h4{
+        font-size: 18px;
+    }
+    p,
+    label,
+    li,
+    input,
+    select,
+    option,
+    textarea,
+    a,
+    button{
+        font-size: 16px;
+    }
+    
+}
+
+@media (min-width: 320px) and (max-width: 480px){
+    header > div,
+    main > section,
+    footer > section{
+        padding: 0 3%;
+    }
+    h1{
+        font-size: 21px;
+    }
+    h2{
+        font-size: 18px;
+    }
+    h3{
+        font-size: 9px;
+    }
+    h4{
+        font-size: 16px;
+    }
+    p,
+    label,
+    li,
+    input,
+    select,
+    option,
+    textarea,
+    a,
+    button{
+        font-size: 14px;
+    }
+}
