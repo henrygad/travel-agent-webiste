@@ -11,7 +11,8 @@
 .flex_box_3d > div,
 .flex_box_4d > div,
 .flex_box_5d > div{
-    flex: 1 0 240.5px;
+    flex: 1;
+    flex-basis: 240.5px;
     height: auto;
 }
 

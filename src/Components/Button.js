@@ -1,23 +1,24 @@
 
 
-const Button = () => {
+const Button = ({text, color = '#ffff', backgroundColor, paddingBlock,paddingInline}) => {
+
+  const buttonstyle = {
+    display: 'block',
+    textAlign: 'center',
+    fontFamily: 'var( --google-san-font)',
+    color: color,
+    width: 'auto',
+    height: 'auto',
+    paddingBlock: paddingBlock,
+    paddingInline: paddingInline,
+    backgroundColor: backgroundColor,
+    border: 0,
+    borderRadius: '4px',
+    boxShadow: `.1px .1px 10px ${backgroundColor}`,
+  }
   return (
     <div>
-    {/*   .button{
-    display: block;
-    text-align: center;
-    color: #fff;
-    width: auto;
-    background-color: var(--secondary-color);
-    border: 0;
-    border-radius: 2px;
-    filter: drop-shadow(.5px .5px .5px rgba(0, 0, 0, .5) );
-    text-decoration: none;
-}
-.button:active{
-    background-color: var(--primary-color);
-    color: black;
-} */}
+      <button className="stylebtn" style={buttonstyle}>{text}</button>
     </div>
   )
 }

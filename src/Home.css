@@ -1,0 +1,256 @@
+
+/* hero scetion design start here 
+*/
+.hero_section{
+    padding: 0;
+}
+.hero_section .flex_wrapper{
+    width: 100%;
+    height: 100%;
+}
+.hero_section .flex_wrapper  > div{
+    display: flex;
+    align-items: center;
+}
+.hero_section .flex_wrapper .hero_text{
+    min-height: 400px;
+    padding-left: 10%;
+    background-image: url('./Assets/hero-img/Ellipse\ 8.svg');
+    background-repeat: no-repeat;
+    background-size: 20cqmin;
+    background-position-x: left;
+    background-position-y: top;
+}
+.hero_text .text_wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    grid-gap: 10px;
+}
+.hero_text .text_wrapper h2{
+    font-family: var(--google-san-font);
+    font-size: 18px;
+    text-transform: uppercase;
+    color: var(--fifth-color);
+}
+.hero_text .text_wrapper h1{
+
+}
+.hero_text .text_wrapper h1 span{
+    background-image: url('./Assets/hero-img/hero-text-decore.jpg');
+    background-repeat: no-repeat;
+    background-size: 120%;
+    background-position-x: left;
+    background-position-y: 80%;
+    padding-inline: 15px;
+}
+.hero_text .text_wrapper p{
+    margin-block: 10px;
+    max-width: 400px;
+    font-size: 14px;
+}
+.hero_text .text_wrapper .btn_wrapper{
+    display: flex;
+    grid-gap: 30px;
+}
+.hero_text .text_wrapper .btn_wrapper .paly_demo_btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-gap: 8px;
+    height: auto;
+    width: auto;
+    background-color: rgba(0, 0, 0, 0);
+    border: 0;
+}
+.hero_text .text_wrapper .btn_wrapper .paly_demo_btn span{
+    display: flex;
+    align-items: center; 
+    width: 30px;
+    height: 30px;
+    padding-left: 2px;
+    background-color: var(--fifth-color);
+    border: 0;
+    border-radius: 50%;
+    box-shadow: .1px .1px 10px var(--fifth-color);
+}
+.hero_text .text_wrapper .btn_wrapper .paly_demo_btn span .icon{
+    margin-inline: auto;
+}
+
+
+.hero_section .flex_wrapper .hero_img{
+    padding-right: 10%;
+    background-image: url('./Assets/hero-img/Decore.jpg');
+    background-repeat: no-repeat;
+    background-size: 75cqmin;
+    background-position-x: right;
+    background-position-y: top;
+}
+.hero_img .image_wrapper{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.hero_img .image_wrapper::before,
+.hero_img .image_wrapper::after{
+    content: '';
+    background-image: url('./Assets/hero-img/airplane.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    height: 100px;
+    width: 100px;
+    top: 12%;
+    z-index: 10;
+}
+.hero_img .image_wrapper::before{
+    left: 25%;
+}
+.hero_img .image_wrapper::after{
+    right: 0;
+}
+.hero_img .image_wrapper img{
+    display: block;
+    width: 100%;
+    object-fit: cover;
+}
+/* end of hero section design*/
+
+
+/* services section desing start here 
+*/
+.services_section{
+    padding-block: 100px;
+}
+.services_section > .title{
+    background-image: url('./Assets/Service-img/backgroundstars.jpg');
+    background-repeat: no-repeat;
+    background-size: 16cqh;
+    background-position-x: right;
+    background-position-y: top;
+    padding-bottom: 70px;
+    text-align: center;
+}
+.services_section > .title h2{}
+.services_section > .title h3{
+    padding-bottom: 10px;
+}
+.services_section > .content{
+    grid-column-gap: 20px;
+    grid-row-gap: 30px;
+    justify-content: center;
+}
+.services_section > .content > .box,
+.services_section > .content > .boxtwo .content{
+    display: flex;
+    flex-direction: column;
+    grid-gap: 20px;
+    max-width: 260px;
+    max-height: 280px;
+    align-items: center;
+    text-align: center;
+    padding: 50px;
+    background-color: #fff;
+}
+.services_section > .content > .box:hover{
+    border: 0;
+    border-radius: 36px;
+    filter: drop-shadow(-1px 80px 20px rgba(226, 226, 226, 0.25));
+}
+.services_section > .content > .boxtwo{
+    position: relative; 
+    max-width: 260px; 
+    max-height: 280px;
+}
+.services_section > .content > .boxtwo .content{
+    position: relative;
+    border: 0;
+    border-radius: 36px;
+    filter: drop-shadow(-1px 80px 20px rgba(226, 226, 226, 0.25));
+    z-index: 1;
+}
+.services_section > .content > .boxtwo .bg_img{
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    left: -10%;
+    bottom: -10%;
+    background-image: url('./Assets/Service-img/backgroundrectangle.jpg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    z-index: 0;
+   
+}
+.services_section > .content > .box img,
+.services_section > .content > .boxtwo .content img{
+    height: 50px;
+    width: auto;
+    object-fit: cover;
+}
+.services_section > .content > .box h4{}
+.services_section > .content > .box p{}
+
+
+/*  end of services section desing  */
+
+
+
+/*low resolution tablets, mobiles (landscape)*/
+@media (min-width: 768px) and (max-width: 1024.9px){
+
+
+    /* hero scetion design start here 
+    */
+    .hero_section .flex_wrapper .hero_text{
+        padding-left: 5%;
+    }
+    .hero_section .flex_wrapper .hero_img{
+        padding-right: 5%;
+    }
+    /* end of hero scetion design*/
+}
+
+@media (min-width: 481px) and (max-width: 767.99px){
+
+     /* hero scetion design start here 
+    */
+    .hero_text .text_wrapper h2{
+        font-size: 16px;
+    }
+    .hero_section .flex_wrapper .hero_text{
+        padding-left: 3%;
+        
+    }
+    .hero_section .flex_wrapper .hero_img{
+        padding-right: 3%;
+    }
+    /* end of hero scetion design*/
+}
+
+@media (min-width: 320px) and (max-width: 480px){
+     /* hero scetion design start here 
+    */
+    .hero_text .text_wrapper h2{
+        font-size: 14px;
+    }
+    .hero_section .flex_wrapper .hero_text{
+        padding-left: 3%;
+    }
+    .hero_section .flex_wrapper .hero_img{
+        padding-right: 3%;
+    }
+    /* end of hero scetion design*/
+
+
+    /* services section desing start here 
+    */
+    .services_section > .title{
+        background-size: 10cqh;
+    }
+    /* end of services section desing */
+
+    
+}

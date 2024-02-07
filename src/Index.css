@@ -44,7 +44,7 @@
     --third-color: #1E1D4C;
     --fourth-color: #F1A501;
     --fifth-color: #DF6951;
-    ---text-color: #5E6282
+    --text-color: #5E6282;
 }
 *,
 *::after,
@@ -52,6 +52,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    border: 0;
 }
 
 html,
@@ -83,16 +84,16 @@ footer > section{
 
 /* font sizes */
 h1{
-    font-size: 84px;
+    font-size: 60px;
 }
 h2{
-    font-size: 50px;
+    font-size: 35px;
 }
 h3{
-    font-size: 18px;
+    font-size: 15px;
 }
 h4{
-    font-size: 20px;
+    font-size: 18px;
 }
 p,
 label,
@@ -131,12 +132,13 @@ textarea{
     font-family: var(--poppins-font);
     color: var(--text-color);
     outline: none;
+    list-style: none;
 }
 a,
 button{
     font-family: var(--google-san-font);
     cursor: pointer;
-    color: var(---text-color);
+    color: var(--text-color);
     text-decoration: none;
 }
 
@@ -148,6 +150,10 @@ body.body::-webkit-scrollbar {
      display: none;  
  }
 
+ .main_nav .nav_list_wraper > .ul_list{
+    grid-gap: 45px;
+ }
+
 
 
 /*low resolution tablets, mobiles (landscape)*/
@@ -157,6 +163,23 @@ body.body::-webkit-scrollbar {
     footer > section{
         padding: 0 5%;
     }
+    h1{
+        font-size: 50px;
+    }
+    h2{
+        font-size: 30px;
+    }
+    h3{
+        font-size: 14px;
+    }
+    h4{
+        font-size: 18px;
+    }
+
+    /* for header nav */
+    .main_nav .nav_list_wraper > .ul_list{
+        grid-gap: 25px;
+     }
 
 }
 @media (min-width: 481px) and (max-width: 767.99px){
@@ -166,16 +189,16 @@ body.body::-webkit-scrollbar {
         padding: 0 3%;
     }
     h1{
-        font-size: 42px;
+        font-size: 40px;
     }
     h2{
-        font-size: 25px;
+        font-size: 28px;
     }
     h3{
-        font-size: 10px;
+        font-size: 14px;
     }
     h4{
-        font-size: 18px;
+        font-size: 17px;
     }
     p,
     label,
@@ -188,6 +211,11 @@ body.body::-webkit-scrollbar {
     button{
         font-size: 16px;
     }
+
+    /* for header nav */
+    .main_nav .nav_list_wraper > .ul_list{
+        grid-gap: 15px;
+     }
     
 }
 
@@ -198,16 +226,16 @@ body.body::-webkit-scrollbar {
         padding: 0 3%;
     }
     h1{
-        font-size: 21px;
+        font-size: 30px;
     }
     h2{
-        font-size: 18px;
+        font-size: 25px;
     }
     h3{
-        font-size: 9px;
+        font-size: 12px;
     }
     h4{
-        font-size: 16px;
+        font-size: 14px;
     }
     p,
     label,
@@ -220,4 +248,9 @@ body.body::-webkit-scrollbar {
     button{
         font-size: 14px;
     }
+
+     /* for header nav */
+     .main_nav .nav_list_wraper > .ul_list{
+        grid-gap: 15px;
+     }
 }
