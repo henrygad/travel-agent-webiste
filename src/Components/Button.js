@@ -14,7 +14,7 @@ const Button = ({text, color = '#ffff', backgroundColor, paddingBlock,paddingInl
     backgroundColor: backgroundColor,
     border: 0,
     borderRadius: '4px',
-    boxShadow: `.1px .1px 10px ${backgroundColor}`,
+    boxShadow: `.1px .1px 10px rgba(241, 165, 1, .4)`,
   }
   return (
     <div>

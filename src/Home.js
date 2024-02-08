@@ -22,7 +22,7 @@ const Home = () => {
         <div className='hero_text'>
           <div className='text_wrapper'>
             <h2>Best Destinations around the world</h2>
-            <h1>Travel,<span>enjoy</span> <br/>and live a new <br/> and full life
+            <h1>Travel,<span>enjoy</span><br/>and live a new <br/>and full life
             </h1>
             <p>Built Wicket longer admire do barton vanity itself do in it. Preferred to sportsmen it engrossed listening. Park gate sell they west hard for the.</p>
             <div className='btn_wrapper'>

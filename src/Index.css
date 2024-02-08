@@ -84,7 +84,7 @@ footer > section{
 
 /* font sizes */
 h1{
-    font-size: 60px;
+    font-size: 82px;
 }
 h2{
     font-size: 35px;
@@ -164,7 +164,7 @@ body.body::-webkit-scrollbar {
         padding: 0 5%;
     }
     h1{
-        font-size: 50px;
+        font-size: 62px;
     }
     h2{
         font-size: 30px;
@@ -189,7 +189,7 @@ body.body::-webkit-scrollbar {
         padding: 0 3%;
     }
     h1{
-        font-size: 40px;
+        font-size: 42px;
     }
     h2{
         font-size: 28px;
@@ -226,7 +226,7 @@ body.body::-webkit-scrollbar {
         padding: 0 3%;
     }
     h1{
-        font-size: 30px;
+        font-size: 32px;
     }
     h2{
         font-size: 25px;

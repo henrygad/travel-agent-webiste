@@ -13,7 +13,6 @@
     align-items: center;
 }
 .hero_section .flex_wrapper .hero_text{
-    min-height: 400px;
     padding-left: 10%;
     background-image: url('./Assets/hero-img/Ellipse\ 8.svg');
     background-repeat: no-repeat;
@@ -32,9 +31,10 @@
     font-size: 18px;
     text-transform: uppercase;
     color: var(--fifth-color);
+    white-space: pre;
 }
 .hero_text .text_wrapper h1{
-
+    white-space: pre;
 }
 .hero_text .text_wrapper h1 span{
     background-image: url('./Assets/hero-img/hero-text-decore.jpg');
@@ -45,9 +45,9 @@
     padding-inline: 15px;
 }
 .hero_text .text_wrapper p{
-    margin-block: 10px;
     max-width: 400px;
     font-size: 14px;
+    margin-block: 10px;
 }
 .hero_text .text_wrapper .btn_wrapper{
     display: flex;
@@ -72,7 +72,7 @@
     background-color: var(--fifth-color);
     border: 0;
     border-radius: 50%;
-    box-shadow: .1px .1px 10px var(--fifth-color);
+    box-shadow: .1px .1px 10px rgba(223, 105, 81, 0.5);
 }
 .hero_text .text_wrapper .btn_wrapper .paly_demo_btn span .icon{
     margin-inline: auto;
@@ -100,16 +100,16 @@
     background-repeat: no-repeat;
     background-size: contain;
     position: absolute;
-    height: 100px;
-    width: 100px;
-    top: 12%;
+    height: 25%;
+    width: 25%;
+    top: 8%;
     z-index: 10;
 }
 .hero_img .image_wrapper::before{
     left: 25%;
 }
 .hero_img .image_wrapper::after{
-    right: 0;
+    right: -5%;
 }
 .hero_img .image_wrapper img{
     display: block;
@@ -217,12 +217,12 @@
 
      /* hero scetion design start here 
     */
+    .hero_section .flex_wrapper .hero_text{
+        min-height: 500px;
+        padding-left: 3%;        
+    }
     .hero_text .text_wrapper h2{
         font-size: 16px;
-    }
-    .hero_section .flex_wrapper .hero_text{
-        padding-left: 3%;
-        
     }
     .hero_section .flex_wrapper .hero_img{
         padding-right: 3%;
@@ -233,11 +233,15 @@
 @media (min-width: 320px) and (max-width: 480px){
      /* hero scetion design start here 
     */
-    .hero_text .text_wrapper h2{
-        font-size: 14px;
-    }
     .hero_section .flex_wrapper .hero_text{
+        min-height: 500px;
         padding-left: 3%;
+    }
+    .hero_text .text_wrapper h2{
+        font-size: 12px;
+    }
+    .hero_text .text_wrapper p{
+        max-width: 340px;
     }
     .hero_section .flex_wrapper .hero_img{
         padding-right: 3%;
