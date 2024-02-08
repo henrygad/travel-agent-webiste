@@ -218,7 +218,7 @@
      /* hero scetion design start here 
     */
     .hero_section .flex_wrapper .hero_text{
-        min-height: 500px;
+        padding-top: 64px;
         padding-left: 3%;        
     }
     .hero_text .text_wrapper h2{
@@ -234,7 +234,7 @@
      /* hero scetion design start here 
     */
     .hero_section .flex_wrapper .hero_text{
-        min-height: 500px;
+        padding-top: 34px;
         padding-left: 3%;
     }
     .hero_text .text_wrapper h2{
