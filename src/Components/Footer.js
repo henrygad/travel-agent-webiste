@@ -3,6 +3,7 @@ import facebookimg from '../Assets/footer-img/facebookimg.jpg'
 import twitterimg from '../Assets/footer-img/twitterimg.jpg'
 import instagramimg from '../Assets/footer-img/instagramimg.jpg'
 import mobileappimg from '../Assets/footer-img/mobileappimg.jpg'
+import footerbgimg from '../Assets/footer-img/footerbgimg.svg'
 
 const Footer = () => {
 
@@ -10,6 +11,12 @@ const Footer = () => {
     footer_wraper: {
       paddingTop: '100px',
       paddingBottom: '20px',
+      backgroundImage: `url(${footerbgimg})`,
+      backgroundRepeat: 'no-repeat',
+      backgroundPositionX: 'right',
+      backgroundPositionY: 'bottom',
+      backgroundSize: 'contain',
+    /*   backgroundColor: 'red', */
     },
     footer_content: {
       paddingBlock: '50px',
@@ -58,7 +65,8 @@ const Footer = () => {
     },
     footer_copyright: {
       width: '100%',
-      textAlign: 'center'
+      textAlign: 'center',
+      marginTop: '50px'
     },
     p_copyright: {
       fontSize: '12px',

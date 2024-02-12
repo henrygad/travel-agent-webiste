@@ -2,6 +2,9 @@ import './Home.css'
 import Header from './Components/Header'
 import Footer from './Components/Footer'
 import Button from './Components/Button'
+import Testimonailslider from './Components/Testimonailslider'
+import Logoscurosel from './Components/Logoscurosel'
+import Subscriptionform from './Components/Subscriptionform'
 
 
 import travelimg from './Assets/hero-img/traveler-img.svg'
@@ -10,6 +13,11 @@ import Calcweatherimg from './Assets/Service-img/calculateweather.jpg'
 import flightimg from './Assets/Service-img/plane.jpg'
 import microphoneimg from './Assets/Service-img/miccrophone.jpg'
 import sittingsimg from './Assets/Service-img/sittings.jpg'
+import tripdaysnav from './Assets/tripdestination-img/tripdestinationnav.svg'
+import box1 from './Assets/booktrip-img/box1.jpg'
+import box2 from './Assets/booktrip-img/box2.jpg'
+import box3 from './Assets/booktrip-img/box3.jpg'
+import booktripimg from './Assets/booktrip-img/booktripimg.jpg'
 
 
 const Home = () => {
@@ -66,6 +74,100 @@ const Home = () => {
           <img src={sittingsimg} alt='sercives' />
           <h4>Customization</h4>
           <p>We deliver outsourced aviation services for military customers</p>
+        </div>
+      </div>
+    </section>
+    <section className=' container_2clm top_destination_section'>
+      <div className='title'>
+        <h3>Top Selling</h3>
+        <h2>Top Destinations</h2>
+      </div>
+      <div className='content flex_box_3d'>
+        <div className='box one'>
+          <div className='text'>
+            <div>
+              <p className='title'>Rome, Italty</p>
+              <p className='price'>$5,42k</p>
+            </div>
+            <p className='trip_days'> <img src={tripdaysnav} alt='trip days nav' /> 10 Days Trip</p>
+          </div>
+        </div>
+        <div className='box two'>
+          <div className='text'>
+            <div>
+              <p className='title'>London, UK</p>
+              <p className='price'>$4.2k</p>
+            </div>
+            <p className='trip_days'> <img src={tripdaysnav} alt='trip days nav' /> 12 Days Trip</p>
+          </div>
+        </div>
+        <div className='boxthree'>
+          <div className='content'>
+            <div className='text'>
+              <div>
+                <p className='title'>Full Europe</p>
+                <p className='price'>$15k</p>
+              </div>
+              <p className='trip_days'> <img src={tripdaysnav} alt='trip days nav' /> 28 Days Trip</p>
+            </div>
+          </div>
+          <div className='bng_img'></div>
+        </div>
+      </div>
+    </section>
+    <section  className='container book_trip_section'>
+      <div className='content  flex_box_2d'>
+        <div className='text'>
+          <div className='title'>
+            <h3>Easy and Fast</h3>
+            <h2>Book your next trip <br/>in 3 easy steps</h2>
+          </div>
+          <div className='boxs'>
+            <div className='box one'>
+              <img  src={box1} alt='box'/>
+              <div className='box_text'>
+                <p className='box_title'>Choose Destination</p>
+                <p className='box_paragraph'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Urna, tortor tempus.</p>
+              </div>
+            </div>
+            <div className='box two'>
+              <img  src={box2} alt='box'/>
+              <div className='box_text'>
+                <p className='box_title'>Make Payment</p>
+                <p className='box_paragraph'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Urna, tortor tempus.</p>
+              </div>
+            </div>
+            <div className='box three'>
+              <img  src={box3} alt='box'/>
+              <div className='box_text'>
+                <p className='box_title'>Reach Airport on Selected Date</p>
+                <p className='box_paragraph'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Urna, tortor tempus. </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className='img'>
+          <img src={booktripimg} alt='book drip' />
+        </div>
+      </div>
+    </section>
+    <section className='container testimonials_section'>
+      <Testimonailslider />
+    </section>
+    <section className='container trusted_companies_curosel'>
+       <div className='curosel_wrapper'>
+         <Logoscurosel />
+       </div>
+    </section>
+    <section className='container subscription_section'>
+      <div className='container_2clm div_wrapper'>
+        <div className='title'>
+          <p>
+            Subscribe to get information, latest news and other <br/> interesting offers about Cobham
+          </p>
+        </div>
+        <div className='content'>
+          <Subscriptionform />
         </div>
       </div>
     </section>
