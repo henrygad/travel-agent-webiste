@@ -4,8 +4,24 @@ import twitterimg from '../Assets/footer-img/twitterimg.jpg'
 import instagramimg from '../Assets/footer-img/instagramimg.jpg'
 import mobileappimg from '../Assets/footer-img/mobileappimg.jpg'
 import footerbgimg from '../Assets/footer-img/footerbgimg.svg'
+import { useMediaqueryv } from '../Hooks/mediaquery'
+
 
 const Footer = () => {
+
+
+    const footer_content = ()=> {
+      const csscontent = `.footer_content{
+        justify-content: center;
+      } `
+
+      const minviewpiontWidth = '480px'
+      const maxviewpointWidth = '10000px'
+
+      return[csscontent, minviewpiontWidth, maxviewpointWidth]
+    }
+    useMediaqueryv(footer_content())
+
 
   const footerstyle = {
     footer_wraper: {
@@ -16,11 +32,9 @@ const Footer = () => {
       backgroundPositionX: 'right',
       backgroundPositionY: 'bottom',
       backgroundSize: 'contain',
-    /*   backgroundColor: 'red', */
     },
     footer_content: {
       paddingBlock: '50px',
-      justifyContent: 'center',
       gridRowGap: '20px',
     },
     footer_content_div: {
@@ -69,7 +83,7 @@ const Footer = () => {
       marginTop: '50px'
     },
     p_copyright: {
-      fontSize: '12px',
+      fontSize: '15px',
       marginTop: '5px',
     },
 
@@ -121,7 +135,7 @@ const Footer = () => {
             </div>
           </div>
         </div>
-        <div className="footer_copyright" style={footerstyle.footer_copyright}><p style={footerstyle.p_copyright}>All rights reserved@jadoo.com</p></div>
+        <div className="footer_copyright" style={footerstyle.footer_copyright}><p style={footerstyle.p_copyright}>All rights reserved @jadoo.com</p></div>
       </section>
     </footer>
   )

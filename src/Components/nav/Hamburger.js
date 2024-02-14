@@ -1,9 +1,9 @@
+import { Useopenmenu } from "./displaymenu";
 
-const Hamburger = ({display = 'flex'}) => {
+const Hamburger = ({displaymobilenav}) => {
 
     const hamburgarstyle = {
         hamburger: {
-          display: display,
           justifyContent: 'center',
           alignItems: 'center',
           width: '40px',
@@ -29,7 +29,7 @@ const Hamburger = ({display = 'flex'}) => {
         },
     }
   return (
-    <div className='hamburgar' style={hamburgarstyle.hamburger}>
+    <div className='hamburgar' style={hamburgarstyle.hamburger} onClick={e=> Useopenmenu(displaymobilenav)}>
         <div className='hamburger_line_wraper' style={hamburgarstyle.hamburger_line_wraper}>
             <span style={hamburgarstyle.span}></span>
             <span style={hamburgarstyle.span}></span>

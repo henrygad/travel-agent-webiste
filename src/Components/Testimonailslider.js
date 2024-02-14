@@ -121,6 +121,7 @@ const Testimonailslider = () => {
             flexDirection: 'column',
             justifyContent: 'center',
             gridGap:'30px',
+            width: '25px',
         },
     }
 

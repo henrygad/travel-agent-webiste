@@ -3,11 +3,42 @@ import logoimg2 from '../Assets/logoscurosel-img/logo2.jpg'
 import logoimg3 from '../Assets/logoscurosel-img/logo3.jpg'
 import logoimg4 from '../Assets/logoscurosel-img/logo4.jpg'
 import logoimg5 from '../Assets/logoscurosel-img/logo5.jpg'
+import { useMediaqueryv } from '../Hooks/mediaquery'
 
 const Logoscurosel = () => {
 
 
   /* start of js code */
+
+  const logoscuroselslides_widthbigsize = () => {
+    const csscontent = `
+        .js-logoscuroselslides{
+          width: 200%
+        } 
+    `
+
+   const minviewpiontWidth = '768px'
+   const maxviewpointWidth = '10000px'
+
+   return[csscontent, minviewpiontWidth, maxviewpointWidth]
+
+  }
+
+
+  const logoscuroselslides_widthsmallsize = () => {
+    const csscontent = `.js-logoscuroselslides{
+       width: 400%;
+     } `
+
+    const minviewpiontWidth = '0px'
+    const maxviewpointWidth = '767.99px'
+
+    return[csscontent, minviewpiontWidth, maxviewpointWidth]
+  }
+
+
+   useMediaqueryv(logoscuroselslides_widthbigsize())
+   useMediaqueryv(logoscuroselslides_widthsmallsize())
   /* end of js code */
 
 
@@ -21,7 +52,6 @@ const Logoscurosel = () => {
     slides: {
       display: 'flex',
       gridGAp: '10px',
-      width: '200%',
       height: '100%',
       paddingBlock: '50px',
     },
@@ -53,7 +83,7 @@ const Logoscurosel = () => {
 
   return (
     <div className="slides_wrapper" style={wrapper}>
-       <div className='slides' style={slides}>
+       <div className='slides js-logoscuroselslides' style={slides}>
         <div className='slide' style={slide}><img style={img} src={logoimg1} alt='curosel' /></div>
         <div className='slide' style={slide}><img style={img} src={logoimg2} alt='curosel' /></div>
         <div className='slide' style={slide_center}><img style={img} src={logoimg3} alt='curosel' /></div>

@@ -2,7 +2,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;900&family=Volkhov:wght@400;700&display=swap");
 @import url('./container.css');
 @import url('./flexbox.css');
-@import url('./gridbox.css');
 
 /* start of usefull selector names 
 
@@ -80,6 +79,7 @@ footer > section{
     padding: 0 10%;
     width: 100%;
     height: auto;
+    overflow: hidden;
 }
 
 /* font sizes */
@@ -150,10 +150,6 @@ body.body::-webkit-scrollbar {
      display: none;  
  }
 
- .main_nav .nav_list_wraper > .ul_list{
-    grid-gap: 45px;
- }
-
 
 
 /*low resolution tablets, mobiles (landscape)*/
@@ -175,11 +171,6 @@ body.body::-webkit-scrollbar {
     h4{
         font-size: 18px;
     }
-
-    /* for header nav */
-    .main_nav .nav_list_wraper > .ul_list{
-        grid-gap: 25px;
-     }
 
 }
 @media (min-width: 481px) and (max-width: 767.99px){
@@ -211,11 +202,6 @@ body.body::-webkit-scrollbar {
     button{
         font-size: 16px;
     }
-
-    /* for header nav */
-    .main_nav .nav_list_wraper > .ul_list{
-        grid-gap: 15px;
-     }
     
 }
 
@@ -248,9 +234,4 @@ body.body::-webkit-scrollbar {
     button{
         font-size: 14px;
     }
-
-     /* for header nav */
-     .main_nav .nav_list_wraper > .ul_list{
-        grid-gap: 15px;
-     }
 }

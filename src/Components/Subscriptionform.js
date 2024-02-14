@@ -9,35 +9,34 @@ const Subscriptionform = () => {
             flexWrap: 'wrap',
             justifyContent:'center',
             alignItems: 'center',
-            gridRowGap: '5px',
+            gridRowGap: '10px',
             gridColumnGap: '30px',
+            paddingInline: '20px',
             zIndex: '5',
         },
         email_wrapper: {
             display: 'flex',
             flex: '2',
             justifyContent: 'flex-end',
-            /* paddingRight: '10px', */
         },
         email_content: {
             display: 'flex',
             justifyContent:'center',
             alignItems: 'center',
             paddingRight: '100px',
-            paddingLeft: '20px',
+            paddingLeft: '10px',
             paddingBlock: '15px',
             backgroundColor: '#fff',
             borderRadius: '10px'
         },
         email: {
-            paddingInline: '10px',
+            paddingInline: '5px',
             paddingBlock: '5px',
         },
         button_wrapper: {
             display: 'flex',
             flex: '1',
             justifyContent: 'flex-end',
-            /* paddingRight: '10px', */
         },
         button: {
             paddingInline: '40px',
