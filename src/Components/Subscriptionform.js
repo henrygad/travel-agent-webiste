@@ -1,6 +1,36 @@
 import { HiOutlineMail } from "react-icons/hi";
+import { useMediaqueryv } from "../Hooks/mediaquery";
 
 const Subscriptionform = () => {
+
+    const emailcontent_widthbigsize = ()=> {
+        const CSScontent = `.js-email_content{
+            padding-left: 15px;
+            padding-right: 100px;
+        } `
+  
+        const minviewpiontWidth = '481px'
+        const maxviewpointWidth = '10000px'
+  
+        return[CSScontent, minviewpiontWidth, maxviewpointWidth]
+      }
+
+    const emailcontent_widthsmallsize = ()=> {
+        const CSScontent = `.js-email_content{
+            padding-left: 10px;
+            padding-right: 25px;
+        } `
+  
+        const minviewpiontWidth = '0px'
+        const maxviewpointWidth = '480.99px'
+  
+        return[CSScontent, minviewpiontWidth, maxviewpointWidth]
+      }
+
+      useMediaqueryv(emailcontent_widthbigsize())
+      useMediaqueryv(emailcontent_widthsmallsize())
+
+
 
     let subscribtion_form = {
         form: {
@@ -16,21 +46,19 @@ const Subscriptionform = () => {
         },
         email_wrapper: {
             display: 'flex',
-            flex: '2',
+            flex: '1',
             justifyContent: 'flex-end',
         },
         email_content: {
             display: 'flex',
             justifyContent:'center',
             alignItems: 'center',
-            paddingRight: '100px',
-            paddingLeft: '10px',
             paddingBlock: '15px',
             backgroundColor: '#fff',
             borderRadius: '10px'
         },
         email: {
-            paddingInline: '5px',
+            paddingInline: '10px',
             paddingBlock: '5px',
         },
         button_wrapper: {
@@ -51,7 +79,7 @@ const Subscriptionform = () => {
   return (
     <form className=" subscribtion_form" style={form}>
         <div className="email_input_wrapper" style={email_wrapper}>
-            <div className="email_content" style={email_content}>
+            <div className="email_content js-email_content" style={email_content}>
                 <HiOutlineMail size={'1.5em'} color="gray"/>
                 <input type="email" name="email" placeholder="Your email" id="js-email" style={email}/>
             </div>

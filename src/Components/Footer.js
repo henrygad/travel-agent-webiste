@@ -15,7 +15,7 @@ const Footer = () => {
         justify-content: center;
       } `
 
-      const minviewpiontWidth = '480px'
+      const minviewpiontWidth = '481px'
       const maxviewpointWidth = '10000px'
 
       return[csscontent, minviewpiontWidth, maxviewpointWidth]

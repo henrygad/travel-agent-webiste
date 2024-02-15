@@ -205,7 +205,7 @@ body.body::-webkit-scrollbar {
     
 }
 
-@media (min-width: 320px) and (max-width: 480px){
+@media (min-width: 0px) and (max-width: 480.99px){
     header > div,
     main > section,
     footer > section{
