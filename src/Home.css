@@ -205,7 +205,7 @@
     padding-bottom: 10px;
  }
  .top_destination_section > .content{
-    grid-column-gap: 10px;
+    grid-column-gap: 30px;
     grid-row-gap: 50px;
     justify-content: center;
     align-items: center;
@@ -213,16 +213,19 @@
  .top_destination_section > .content .box,
  .top_destination_section > .content .boxthree .content{
     position: relative;
-    max-width: 360px;
-    height: 320px;
+    width: auto;
+    max-width: 320px;
+    height: 380px;
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: top;
+    background-position: center;
+    border-radius: 30px;
  }
  .top_destination_section > .content .boxthree{
     position: relative;
-    max-width: 360px;
-    height: 320px;
+    width: auto;
+    max-width: 320px;
+    height: 380px;
  }
  .top_destination_section > .content .box.one{
     background-image: url('./Assets/tripdestination-img/destionationimg3.jpg');
@@ -237,50 +240,42 @@
  .top_destination_section > .content .box .text,
  .top_destination_section > .content .boxthree .content .text{
     position: absolute;
-    left: 50%;
-    bottom: -6%;
-    transform: translate(-50%);
-    min-width: 250px;
-    height: 28%;
-    padding: 15px;
+    right: 0;
+    left: 0;
+    bottom: -1px;
+    height: 80px;
     border: 0;
     border-radius: 0px 0px 30px 30px;
     background-color: #fff;
     filter: drop-shadow(-1px 80px 20px rgba(226, 226, 226, 0.25));
+    padding: 15px;
  }
  .top_destination_section > .content .box .text > div, 
  .top_destination_section > .content .boxthree .content .text > div{
     display: flex;
     justify-content: space-between;
  }
- .top_destination_section > .content .box .text > div p, 
- .top_destination_section > .content .boxthree .content .text > div p{
-   font-size: 14px;
- }
  .top_destination_section > .content .box .text p,
  .top_destination_section > .content .boxthree .content .text p{
-    display: flex;
-    align-items: center;
-    grid-gap: 10px;
     font-size: 12px;
-    padding-block: 5px;
+    padding: 5px;
  }
  .top_destination_section > .content .box .text p img,
  .top_destination_section > .content .boxthree .content .text p img{
-    height: 18px;
+    height: 15px;
+    margin-right: 10px;
     object-fit: cover;
  }
  .top_destination_section > .content .boxthree .bng_img{
     position: absolute;
     top: 35%;
-    right: -40%;
-    transform: translate(-50%);
-    width: 100px;
+    right: -10%;
+    width: 320px;
     height: 200px;
     background-image: url('./Assets/tripdestination-img/bgimg.svg');
     background-repeat: no-repeat;
     background-size: contain;
-    background-position: center;
+    background-position: right;
     z-index: 0;
  }
  /* end of to destination design section */
