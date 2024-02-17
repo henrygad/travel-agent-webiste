@@ -1,20 +1,7 @@
 import jadoologo from '../Assets/header-img/jadoo-logo.svg'
 import Nav from './nav/Nav'
-import {useGetcurrentsection} from '../Hooks/getcurrentsection'
 
 const Header = () => {
-/*   const test = useGetcurrentsection('js-header')
-  console.log(test) */
-
-  function test(){
-    const test = useGetcurrentsection('js-header')
-    console.log(test)
-
-
-    return['henfhfh']
-  }
-
-  window.onscroll =test
 
   const headerstyle = {
     header: {
