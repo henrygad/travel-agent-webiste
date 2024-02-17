@@ -1,11 +1,8 @@
 import { useEffect } from 'react'
 import jadoologo from '../Assets/header-img/jadoo-logo.svg'
 import Nav from './nav/Nav'
-import { useCurrentsection } from '../Hooks/getcurrentsections'
 
 const Header = () => {
-  useCurrentsection('js-main-hero')
-
 
   const headerstyle = {
     header: {
