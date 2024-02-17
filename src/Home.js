@@ -25,7 +25,7 @@ const Home = () => {
   <>
   <Header />
   <main>
-    <section className='hero_container_100vh hero_section'>
+    <section className='hero_container_100vh hero_section' id='js-main-hero'>
       <div className='flex_box_2d flex_wrapper'>
         <div className='hero_text'>
           <div className='text_wrapper'>

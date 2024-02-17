@@ -5,13 +5,9 @@ const Subscriptionform = () => {
 
     const emailcontent_widthbigsize = ()=> {
         const CSScontent = `.js-email_content{
-<<<<<<< HEAD
             width: 400px;
-            
-=======
             padding-left: 15px;
             padding-right: 100px;
->>>>>>> 0ea70f11b104075ada8dd5e498c7f1f82cff1720
         } `
   
         const minviewpiontWidth = '481px'
@@ -22,13 +18,9 @@ const Subscriptionform = () => {
 
     const emailcontent_widthsmallsize = ()=> {
         const CSScontent = `.js-email_content{
-<<<<<<< HEAD
             width: 280px;
-           
-=======
             padding-left: 10px;
             padding-right: 25px;
->>>>>>> 0ea70f11b104075ada8dd5e498c7f1f82cff1720
         } `
   
         const minviewpiontWidth = '0px'
@@ -63,12 +55,9 @@ const Subscriptionform = () => {
             display: 'flex',
             justifyContent:'flex-start',
             alignItems: 'center',
-<<<<<<< HEAD
             height: '60px',
             paddingLeft: '10px',
-=======
             paddingBlock: '15px',
->>>>>>> 0ea70f11b104075ada8dd5e498c7f1f82cff1720
             backgroundColor: '#fff',
             borderRadius: '10px'
         },
