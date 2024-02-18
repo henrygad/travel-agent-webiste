@@ -1,38 +1,6 @@
 import { HiOutlineMail } from "react-icons/hi";
-import { useMediaqueryv } from "../Hooks/mediaquery";
 
 const Subscriptionform = () => {
-
-    const emailcontent_widthbigsize = ()=> {
-        const CSScontent = `.js-email_content{
-            width: 400px;
-            padding-left: 15px;
-            padding-right: 100px;
-        } `
-  
-        const minviewpiontWidth = '481px'
-        const maxviewpointWidth = '10000px'
-  
-        return[CSScontent, minviewpiontWidth, maxviewpointWidth]
-      }
-
-    const emailcontent_widthsmallsize = ()=> {
-        const CSScontent = `.js-email_content{
-            width: 280px;
-            padding-left: 10px;
-            padding-right: 25px;
-        } `
-  
-        const minviewpiontWidth = '0px'
-        const maxviewpointWidth = '480.99px'
-  
-        return[CSScontent, minviewpiontWidth, maxviewpointWidth]
-      }
-
-      useMediaqueryv(emailcontent_widthbigsize())
-      useMediaqueryv(emailcontent_widthsmallsize())
-
-
 
     let subscribtion_form = {
         form: {
@@ -62,8 +30,7 @@ const Subscriptionform = () => {
             borderRadius: '10px'
         },
         email: {
-            paddingInline: '10px',
-            paddingBlock: '5px',
+            padding: '2px',
         },
         button_wrapper: {
             display: 'flex',

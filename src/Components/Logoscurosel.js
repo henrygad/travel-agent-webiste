@@ -3,43 +3,9 @@ import logoimg2 from '../Assets/logoscurosel-img/logo2.jpg'
 import logoimg3 from '../Assets/logoscurosel-img/logo3.jpg'
 import logoimg4 from '../Assets/logoscurosel-img/logo4.jpg'
 import logoimg5 from '../Assets/logoscurosel-img/logo5.jpg'
-import { useMediaqueryv } from '../Hooks/mediaquery'
+
 
 const Logoscurosel = () => {
-
-
-  /* start of js code */
-
-  const logoscuroselslides_widthbigsize = () => {
-    const csscontent = `
-        .js-logoscuroselslides{
-          width: 200%
-        } 
-    `
-
-   const minviewpiontWidth = '768px'
-   const maxviewpointWidth = '10000px'
-
-   return[csscontent, minviewpiontWidth, maxviewpointWidth]
-
-  }
-
-
-  const logoscuroselslides_widthsmallsize = () => {
-    const csscontent = `.js-logoscuroselslides{
-       width: 400%;
-     } `
-
-    const minviewpiontWidth = '0px'
-    const maxviewpointWidth = '767.99px'
-
-    return[csscontent, minviewpiontWidth, maxviewpointWidth]
-  }
-
-
-   useMediaqueryv(logoscuroselslides_widthbigsize())
-   useMediaqueryv(logoscuroselslides_widthsmallsize())
-  /* end of js code */
 
 
   /* start of css code */

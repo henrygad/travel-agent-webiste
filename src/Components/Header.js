@@ -1,8 +1,20 @@
-import { useEffect } from 'react'
 import jadoologo from '../Assets/header-img/jadoo-logo.svg'
 import Nav from './nav/Nav'
+import { useDisplayelement } from '../Hooks/displayeleonscroll'
+
 
 const Header = () => {
+
+  useDisplayelement([-40, 'js-main-hero'], (value, index)=> {
+    const header_el = document.getElementById('js-main-header')
+    
+    if(value){
+      header_el.style.display = 'none'
+    }else{
+      header_el.style.display = 'flex'
+    }
+
+  })
 
   const headerstyle = {
     header: {
@@ -11,6 +23,7 @@ const Header = () => {
       left: '0',
       right: '0',
       backgroundColor: 'rgba(0, 0 , 0, 0)',
+      transition: 'top .25s ease-in-out',
       zIndex: '100'
     },
     header_wrapper: {
@@ -29,34 +42,6 @@ const Header = () => {
   },
   }
 
-  useEffect(()=> {
-    const displaymainheader = ()=>{
-      const header_el = document.getElementById('js-main-header')
-       const currentsection = getcurrentsection()
-
-       if(currentsection){
-           header_el.style.display= 'flex'
-       }else{
-          header_el.style.display= 'none'  
-       }
-    }
-
-    function getcurrentsection() {
-      const el_id = document.getElementById('js-main-hero')
-      const rect = el_id.getBoundingClientRect()
-
-      
-      return(
-        rect.top >= -50 &&
-        rect.bottom >= 0 &&
-        rect.left >= 0 &&
-        rect.right >= 0
-      )
-    }
-
-    window.onscroll = displaymainheader
-  
-  }, [])
 
   return (
     <header style={headerstyle.header} id='js-main-header'>

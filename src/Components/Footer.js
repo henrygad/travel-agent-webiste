@@ -4,24 +4,10 @@ import twitterimg from '../Assets/footer-img/twitterimg.jpg'
 import instagramimg from '../Assets/footer-img/instagramimg.jpg'
 import mobileappimg from '../Assets/footer-img/mobileappimg.jpg'
 import footerbgimg from '../Assets/footer-img/footerbgimg.svg'
-import { useMediaqueryv } from '../Hooks/mediaquery'
+
 
 
 const Footer = () => {
-
-
-    const footer_content = ()=> {
-      const csscontent = `.footer_content{
-        justify-content: center;
-      } `
-
-      const minviewpiontWidth = '481px'
-      const maxviewpointWidth = '10000px'
-
-      return[csscontent, minviewpiontWidth, maxviewpointWidth]
-    }
-    useMediaqueryv(footer_content())
-
 
   const footerstyle = {
     footer_wraper: {
