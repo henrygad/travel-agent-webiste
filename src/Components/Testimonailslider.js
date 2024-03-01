@@ -2,18 +2,17 @@ import reviewerimg1 from '../Assets/testimonial-img/reviewer1.jpg'
 import reviewerimg2 from '../Assets/testimonial-img/reviewer2.jpg'
 import reviewerimg3 from '../Assets/testimonial-img/reviewer3.jpg'
 import { SlArrowUp, SlArrowDown } from "react-icons/sl";
+import  Settings from '../responsiveJsSlider/settings'
+import {Dislaydotbackgrondcolor} from '../responsiveJsSlider/sliderfeatures'
 
 const Testimonailslider = () => {
-//js code
-//end of js code
-
 
 //css code
     let testimonailsliderstyle = {
         wrapper: {
             justifyContent: 'center',
             gridRowGap: '30px',
-            height: '400px',
+            height: '450px',
         },
        title_div: {
             display: 'flex',
@@ -49,16 +48,28 @@ const Testimonailslider = () => {
             backgroundColor: 'black',
         },
         slider: {
-            display: 'flex',
-            flexBasis: '320px',
-            height: '100%',
-            overflow: 'hidden',
+             display: 'flex',
+             flexBasis: '320px',
+             width: '100%',
+             height: '100%',
+             overflow: 'hidden',
         },
-        slides: {
+        slide_wrapper:{
             position: 'relative',        
-            top: '-00%',
             width: '100%',
             height: '100%',
+        },
+        slide_front:{
+            position: 'absolute', 
+            top: '-8%',
+            left: '-5%',
+            display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'center',
+            width: '100%',
+            height: '100%',
+            filter: 'drop-shadow(-1px 80px 20px rgba(226, 226, 226, 0.25))',
+            zIndex: '2',
         },
         slide: {
             display: 'flex',
@@ -66,17 +77,6 @@ const Testimonailslider = () => {
             alignItems: 'center',
             width: '100%',
             height: '100%',
-        },
-        slide_one: {
-            position: 'absolute',
-            top: '-10%',
-            left: '-5%',
-            display: 'flex',
-            justifyContent: 'center',
-            alignItems: 'center',
-            width: '100%',
-            height: '100%',
-            zIndex: '10',
         },
         slidecontent: {
             position: 'relative',
@@ -86,15 +86,6 @@ const Testimonailslider = () => {
             backgroundColor: '#fff',
             border: '.1px solid lightgray',
             borderRadius: '20px',
-        },
-        slidecontent_one: {
-            position: 'relative',
-            width: '75%',
-            height: 'auto%',
-            padding: '25px',
-            backgroundColor: '#fff',
-            borderRadius: '20px',
-            filter:'drop-shadow(-1px 40px 20px rgba(226, 226, 226, 0.25))',
         },
         slideimg: {
             position: 'absolute',
@@ -123,13 +114,107 @@ const Testimonailslider = () => {
             gridGap:'30px',
             width: '25px',
         },
+        arrownavs: {
+            cursor:' pointer',
+        }
     }
 
     const {wrapper, title_div, slider, 
            title, h2, h3, dot, dots_nav, dot1,
-            slides, slider_nav, slide, slide_one, slidecontent, slidecontent_one,
-             slideimg, paragraph, name, description} = testimonailsliderstyle
+            slider_nav, slide_wrapper , slide, slide_front, slidecontent,
+            slideimg, paragraph, name, description, arrownavs} = testimonailsliderstyle
 //end of css code
+
+    const arrSlides = [
+        <div className='slide_wrapper one' style={slide_wrapper}>
+            <div className="slide one" style={slide_front}>
+                <div className='slide content' style={ slidecontent}>
+                    <img style={slideimg} src={reviewerimg3} alt="client" />
+                    <p className="slide_paragraph" style={paragraph}>
+                        “On the Windows talking painted pasture yet its express parties use. Sure last upon he same as knew next. Of believed or diverted no.”
+                    </p>
+                    <p className="slide_name" style={name}>Mike taylor</p>
+                    <p className="slide_description" style={description}>Lahore, Pakistan</p>
+                </div>
+            </div>
+
+            <div className="slide two" style={slide} >
+            <div className='slide_content' style={slidecontent}>
+                <img style={slideimg} src={reviewerimg2} alt="client" />
+                <p className="slide_paragraph" style={paragraph}>
+                    “On the Windows talking painted pasture yet its express parties use. Sure last upon he same as knew next. Of believed or diverted no.”
+                </p>
+                <p className="slide_name" style={name}>Chris Thomas</p>
+                <p className="slide_description" style={description}>CEO of Red Button</p>
+            </div>
+        </div>
+        </div>,
+        <div className='slide_wrapper two'  style={slide_wrapper}>
+            <div className="slide two" style={slide_front}>
+                <div className='slide_content' style={slidecontent}>
+                    <img style={slideimg} src={reviewerimg2} alt="client" />
+                    <p className="slide_paragraph" style={paragraph}>
+                        “On the Windows talking painted pasture yet its express parties use. Sure last upon he same as knew next. Of believed or diverted no.”
+                    </p>
+                    <p className="slide_name" style={name}>Chris Thomas</p>
+                    <p className="slide_description" style={description}>CEO of Red Button</p>
+                </div>
+            </div>
+
+            <div className="slide three" style={slide}>
+                <div className='slide content' style={slidecontent}>
+                    <img style={slideimg} src={reviewerimg1} alt="client" />
+                    <p className="slide_paragraph" style={paragraph}>
+                        “On the Windows talking painted pasture yet its express parties use. Sure last upon he same as knew next. Of believed or diverted no.”
+                    </p>
+                    <p className="slide_name" style={name}>Rosline Jonhson</p>
+                    <p className="slide_description" style={description}>Front end engineer</p>
+                </div>
+        </div>
+        </div>,
+        <div className='slide_wrapper three'  style={slide_wrapper}>
+            <div className="slide three" style={slide_front}>
+                <div className='slide content' style={slidecontent}>
+                    <img style={slideimg} src={reviewerimg1} alt="client" />
+                    <p className="slide_paragraph" style={paragraph}>
+                        “On the Windows talking painted pasture yet its express parties use. Sure last upon he same as knew next. Of believed or diverted no.”
+                    </p>
+                    <p className="slide_name" style={name}>Rosline Jonhson</p>
+                    <p className="slide_description" style={description}>Front end engineer</p>
+                </div>
+            </div>
+
+            <div className="slide one" style={slide}>
+                <div className='slide content' style={ slidecontent}>
+                    <img style={slideimg} src={reviewerimg3} alt="client" />
+                    <p className="slide_paragraph" style={paragraph}>
+                        “On the Windows talking painted pasture yet its express parties use. Sure last upon he same as knew next. Of believed or diverted no.”
+                    </p>
+                    <p className="slide_name" style={name}>Mike taylor</p>
+                    <p className="slide_description" style={description}>Lahore, Pakistan</p>
+                </div>
+            </div>
+
+        </div>,
+    ]
+
+    const displayslides = Settings(arrSlides, 
+        {
+            slidesWrapperId: 'js-testimonial-slider',
+            slidesWrapperClass: 'slides',
+            numberOfSlides_toDisplay_PerView: ()=>{ return 1},
+            slidemove_from: 'top',
+            autoplay : {isAutoplayActivated: false, onloadPlay: true, isPauseActivated: false, autoPlayDurition: 2000, autoPlayAnimation: 'none'},
+            arrownav: {isArrownavActivated: true,  arrowslidernav_Class: 'js-testimonial-slider-arrownav', arrowNavAnimation: 'all 2s ease'},
+            dotnav: {isDotnavActivated: true, dotslidernav_Class: 'js-dot-testimonial', dotNavAnimation: 'none'},
+         }, (slideInfor)=>{
+            Dislaydotbackgrondcolor({
+                slidescurrentPositionIndex: slideInfor.slidescurrentPositionIndex, 
+                dotslidernav_Class: 'js-dot-testimonial', 
+                backgroundColor: 'black',
+                transition: 'all .25s ease'})
+         }
+        )
 
   return (
     <div className="flex_box_2d testimonial_slider_wrapper" style={wrapper}>
@@ -139,47 +224,17 @@ const Testimonailslider = () => {
                 <h2 style={h2}>What people say <br/>about Us.</h2>
             </div>
             <div className="dot_navs" style={dots_nav}>
-                <div className="dot" style={dot1}></div>
-                <div className="dot" style={dot}></div>
-                <div className="dot" style={dot}></div>
+                <div className="js-dot-testimonial" style={dot1}></div>
+                <div className="js-dot-testimonial" style={dot}></div>
+                <div className="js-dot-testimonial" style={dot}></div>
             </div>
         </div>
         <div className="slider" style={slider}>
-            <div className="slides" style={slides}>
-                <div className="slide one" style={slide_one}>
-                    <div className='slide content' style={slidecontent_one}>
-                        <img style={slideimg} src={reviewerimg3} alt="client" />
-                        <p className="slide_paragraph" style={paragraph}>
-                            “On the Windows talking painted pasture yet its express parties use. Sure last upon he same as knew next. Of believed or diverted no.”
-                        </p>
-                        <p className="slide_name" style={name}>Mike taylor</p>
-                        <p className="slide_description" style={description}>Lahore, Pakistan</p>
-                    </div>
-                </div>
-                <div className="slide two" style={slide}>
-                    <div className='slide_content' style={slidecontent}>
-                        <img style={slideimg} src={reviewerimg2} alt="client" />
-                        <p className="slide_paragraph" style={paragraph}>
-                            “On the Windows talking painted pasture yet its express parties use. Sure last upon he same as knew next. Of believed or diverted no.”
-                        </p>
-                        <p className="slide_name" style={name}>Chris Thomas</p>
-                        <p className="slide_description" style={description}>CEO of Red Button</p>
-                    </div>
-                </div>
-                <div className="slide three" style={slide}>
-                    <div className='slide content' style={slidecontent}>
-                        <img style={slideimg} src={reviewerimg1} alt="client" />
-                        <p className="slide_paragraph" style={paragraph}>
-                            “On the Windows talking painted pasture yet its express parties use. Sure last upon he same as knew next. Of believed or diverted no.”
-                        </p>
-                        <p className="slide_name" style={name}>Rosline Jonhson</p>
-                        <p className="slide_description" style={description}>Front end engineer</p>
-                    </div>
-                </div>
-            </div>
+            {displayslides}
+                  
             <div className='slider_arr_nav' style={slider_nav}>
-                <SlArrowUp size={'.8em'} color='black' />
-                <SlArrowDown size={'.8em'} color='gray' />
+                <SlArrowUp size={'.8em'} color='black' className='js-testimonial-slider-arrownav' style={arrownavs}/>
+                <SlArrowDown size={'.8em'} color='gray' className='js-testimonial-slider-arrownav' style={arrownavs}/>
             </div>
         </div>
     </div>

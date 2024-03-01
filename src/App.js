@@ -5,15 +5,9 @@ import { useViewpiont } from "./Hooks/mediaquery";
 function App() {
 
   const viewFuc = useViewpiont((width, height)=>{
-    const logoscuroselslides_ele = document.querySelector('.js-logoscuroselslides')
     const emailContent_ele = document.querySelector('.js-email_content')
     const footerContent_ele = document.querySelector('.footer_content')
     
-      if(width >= 768){
-        logoscuroselslides_ele.style.width = '200%'
-      }else{
-        logoscuroselslides_ele.style.width = '400%'
-      }
 
       if(width >= 481){
           emailContent_ele.style.width = '400px'
