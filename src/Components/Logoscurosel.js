@@ -65,7 +65,7 @@ const Logoscurosel = () => {
       if(window.innerWidth >= 768){
         numofslidesdisplay  = 5
       }else{
-        numofslidesdisplay = 2.5
+        numofslidesdisplay = 2
       }
       return numofslidesdisplay},
     slidemove_from: 'right',
